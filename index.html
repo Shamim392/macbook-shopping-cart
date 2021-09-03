@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac-Book-Pro</title>
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- some style -->
+        <style>
+            .total-prices::after{
+                content: '';
+                display: block;
+                height: 2px;
+                width: 100%;
+                background-color: black;
+                margin-top: 4%;
+            }
+        </style>
+</head>
+<body>
+    <!--header section -->
+    <header>
+
+    </header>
+    <!-- main section -->
+    <main>
+        <section class="container">
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col p-5">
+                        <img class="img-fluid" src="images/mac.png" alt="">                
+                    </div>
+                    <div class="col pt-5">
+                        <h2 class="">Customize your Blue 24-inch iMac with Apple M1 chip</h2>
+                        <small>Apple M1 chip with 8-core CPU performance cores and 4 efficiency cores,7-core GPU and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt/ USB 4 ports Magic Mouse keyboard US English.
+                        </small>
+                    <!-- memory part -->
+                    <div class="">
+                        <h4 class="pt-5">Memory</h4>
+                        <button onclick="updateTotalPrice('memory', '8GB')" type="button" class="btn btn-outline-primary">8GB unified memory</button>
+
+                        <button onclick="updateTotalPrice('memory', '16GB')" type="button" class="btn btn-outline-primary">16GB unified memory</button>
+                    </div>
+                    <!-- storage part -->
+                    <div class="">
+                        <h4 class="pt-5">Storage</h4>
+                        <button onclick="updateTotalPrice('storage', '256GB')" type="button" class="btn btn-success">256GB SSD storage</button>
+
+                        <button onclick="updateTotalPrice('storage', '512GB')" type="button" class="btn btn-success">512GB SSD storage</button>
+
+                        <button onclick="updateTotalPrice('storage', '1TB')" type="button" class="btn btn-success">1TB SSD storage</button>
+                    </div>
+
+                    <!-- delivery option -->
+
+                    <div class="">
+                        <h4 class="pt-5">Choose your delivery option</h4>
+                        <button onclick="updateTotalPrice('delivery', 'free')" type="button" class="btn btn-info">Friday,Aug 25 Free Prime Delivery</button>
+
+                        <button onclick="updateTotalPrice('delivery', 'premium')" type="button" class="btn btn-info">Friday,Aug 21 Delivery charge $20</button>
+                    </div>
+
+                    <!-- total price part -->
+
+                    <div class="row pt-5">
+                        <div class="col-md-8 gap-2">
+                            <h5>Best Price</h5>
+                            <h5>Extra Memory Cost</h5>
+                            <h5>Extra Storage Cost</h5>
+                            <h5 class="total-prices">Delivery charge</h5>
+                            <h5 class="pt-1">Total Price</h5>
+
+                        </div>
+                        <div class="col-md-4 gap-2">
+                            <h5>$<span id="initial-price">1299</span></h5>
+                            <h5>$<span id="extra-memory">0</span></h5>
+                            <h5>$<span id="extra-storage">0</span></h5>
+                            <h5>$<span id="delivery-cost">0</span></h5>
+                            <h5 class="pt-4">$<span id="total-price">1299</span></h5>
+                        </div>
+                    </div>
+
+                    <!-- promo code -->
+                    <div class="pt-5">
+                        <h5 class="pb-3">Add Promo Code : <span class="text-white bg-secondary p-2 rounded">stevekaku</span></h5>
+                        <input id="promo-code-input" type="text">
+                        <button id ="promo-code-button" type="button" class="btn btn-danger ps-4 pe-4">Apply</button>
+                    </div>
+                    
+                </div>
+             </div>
+        </section>
+        <!-- total price section -->
+        <section class="pt-3 pb-2">
+            <h2 class="text-center"> <span class="text-primary">Total: </span>$<span id="final-total">1299</span></h2>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
